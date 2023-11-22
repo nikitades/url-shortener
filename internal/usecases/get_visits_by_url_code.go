@@ -6,7 +6,7 @@ import (
 	"github.com/nikitades/url-shortener/internal/domain"
 )
 
-type GetVisitsByUrlCodeUsecase func(context.Context, string) ([]domain.Visit, error)
+type GetVisitsByUrlCodeUsecase func(ctx context.Context, urlCode string) ([]domain.Visit, error)
 
 func NewGetVisitsByUrlCodeUsecase(visitRepo domain.VisitRepository) GetVisitsByUrlCodeUsecase {
 	return func(ctx context.Context, urlCode string) ([]domain.Visit, error) {
