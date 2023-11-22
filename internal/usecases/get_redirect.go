@@ -6,7 +6,7 @@ import (
 	"github.com/nikitades/url-shortener/internal/domain"
 )
 
-type GetRedirectUsecase func(context.Context, string, string) (string, error)
+type GetRedirectUsecase func(ctx context.Context, urlCode string, userAgent string) (string, error)
 
 func NewGetRedirectUsecase(
 	urlRepo domain.UrlRepository,
