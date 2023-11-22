@@ -11,7 +11,7 @@ type GetRedirectUsecase func(context.Context, string, string) (string, error)
 func NewGetRedirectUsecase(
 	urlRepo domain.UrlRepository,
 	visitRepo domain.VisitRepository,
-	timeprov *TimeProvider,
+	timeprov TimeProvider,
 ) GetRedirectUsecase {
 
 	return func(ctx context.Context, code string, userAgent string) (string, error) {

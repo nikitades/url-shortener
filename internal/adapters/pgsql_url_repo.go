@@ -88,6 +88,10 @@ func (r *PgsqlUrlRepo) Create(ctx context.Context, original string, short string
 //TODO
 /*
 	- тесты
+		- посчитать покрытие
+		- следить как покрытие растет
+		- юниты на важное
+		- интеграционные на все ep с разными исходами
 
 */
 

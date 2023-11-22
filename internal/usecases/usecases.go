@@ -17,7 +17,7 @@ func InitUsecases(
 	urlRepo domain.UrlRepository,
 	visitRepo domain.VisitRepository,
 	urlgen UrlGenerator,
-	timeprov *TimeProvider,
+	timeprov TimeProvider,
 ) (*Usecases, error) {
 	return &Usecases{
 		HealthCheck:        NewHealthCheckUsecase(dbconn),

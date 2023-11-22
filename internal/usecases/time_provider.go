@@ -2,9 +2,7 @@ package usecases
 
 import "time"
 
-type TimeProvider struct {
-}
-
-func (t *TimeProvider) Now() time.Time {
-	return time.Now().In(time.Local)
+//go:generate mockery --name TimeProvider
+type TimeProvider interface {
+	Now() time.Time
 }

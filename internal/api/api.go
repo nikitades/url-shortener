@@ -30,7 +30,7 @@ var createDependencies = func(sqlconnstr string) (
 	domain.UrlRepository,
 	domain.VisitRepository,
 	usecases.UrlGenerator,
-	*usecases.TimeProvider,
+	usecases.TimeProvider,
 ) {
 	dbconn, err := adapters.NewPgsqlConn(sqlconnstr)
 	if err != nil {
@@ -40,7 +40,7 @@ var createDependencies = func(sqlconnstr string) (
 	urlRepo := adapters.NewPgsqlUrlRepo(dbconn)
 	visitRepo := adapters.NewPgsqlVisitRepo(dbconn)
 	urlgen := adapters.NewRandBytesUrlGenerator()
-	timeprov := &usecases.TimeProvider{}
+	timeprov := &adapters.NativeTimeProvider{}
 
 	return dbconn, urlRepo, visitRepo, urlgen, timeprov
 }
