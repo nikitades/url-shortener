@@ -1,5 +1,5 @@
 # Demo URL shortener service
-![Coverage](https://img.shields.io/badge/Coverage-48.1%25-yellow)
+![Coverage](https://img.shields.io/badge/Coverage-67.2%25-yellow)
 
 ## Badges
 
