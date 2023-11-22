@@ -85,16 +85,6 @@ func (r *PgsqlUrlRepo) Create(ctx context.Context, original string, short string
 	return url, nil
 }
 
-//TODO
-/*
-	- тесты
-		- посчитать покрытие
-		- следить как покрытие растет
-		- юниты на важное
-		- интеграционные на все ep с разными исходами
-
-*/
-
 func NewPgsqlUrlRepo(dbconn *sqlx.DB) *PgsqlUrlRepo {
 	return &PgsqlUrlRepo{dbconn}
 }
