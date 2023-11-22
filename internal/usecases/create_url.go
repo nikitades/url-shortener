@@ -7,7 +7,7 @@ import (
 	"github.com/nikitades/url-shortener/internal/domain"
 )
 
-type CreateUrlUsecase func(context.Context, string) (domain.Url, error)
+type CreateUrlUsecase func(ctx context.Context, s string) (domain.Url, error)
 
 func NewCreateUrlUsecase(repo domain.UrlRepository, urlgen UrlGenerator, timeprov TimeProvider) CreateUrlUsecase {
 

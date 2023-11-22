@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+//go:generate mockery --name VisitRepository
 type VisitRepository interface {
 	FindByUrlCode(ctx context.Context, urlCode string) ([]Visit, error)
 	Create(

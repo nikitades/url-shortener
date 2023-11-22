@@ -7,3 +7,7 @@ migrate:
 
 start:
 	go run ./cmd/api/main.go -sqlconn=$(DBCONN) -port=$(PORT)
+
+testreport:
+	go test ./... -coverpkg=./... -coverprofile=coverage.out
+	go tool cover -html=coverage.out -o coverage.html
