@@ -23,6 +23,6 @@ func InitUsecases(
 		HealthCheck:        NewHealthCheckUsecase(dbconn),
 		CreateUrl:          NewCreateUrlUsecase(urlRepo, urlgen, timeprov),
 		Redirect:           NewGetRedirectUsecase(urlRepo, visitRepo, timeprov),
-		GetVisitsByUrlCode: NewGetVisitsByUrlCodeUsecase(visitRepo),
+		GetVisitsByUrlCode: NewGetVisitsByUrlCodeUsecase(visitRepo, urlRepo),
 	}, nil
 }

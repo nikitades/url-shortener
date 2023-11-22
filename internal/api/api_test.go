@@ -11,6 +11,13 @@ import (
 	"gopkg.in/DATA-DOG/go-sqlmock.v1"
 )
 
+var urlrepo *domainmocks.UrlRepository
+var visitrepo *domainmocks.VisitRepository
+var urlgen *usecasemocks.UrlGenerator
+var timeprov *usecasemocks.TimeProvider
+
+var _api *api
+
 func setupTest(t *testing.T) {
 	r := chi.NewRouter()
 	r.Use(contentTypeMiddleware)
