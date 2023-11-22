@@ -59,7 +59,7 @@ func TestVisitsAreFound(t *testing.T) {
 
 	_api.r.ServeHTTP(rr, r)
 	assert.Equal(t, http.StatusOK, rr.Result().StatusCode)
-	expected, err := json.Marshal(map[string]map[string]int{"stats": map[string]int{
+	expected, err := json.Marshal(map[string]map[string]int{"stats": {
 		urlSource: 5,
 	}})
 	assert.NoError(t, err)
